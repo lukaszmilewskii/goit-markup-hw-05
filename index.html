@@ -26,19 +26,31 @@
         <nav class="navigation">
           <a class="logo" href="./index.html">Web<span>Studio</span></a>
           <ul class="nav-menu">
-            <li><a class="nav-menu-link" href="./index.html">Agencja</a></li>
-            <li><a class="nav-menu-link" href="./porfolio.html">Portfolio</a></li>
-            <li><a class="nav-menu-link" href="#">Kontakt</a></li>
+            <li>
+              <div class="link-underline">
+                <a class="nav-menu-link" href="./index.html"><span>Agencja</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="link-underline-hover">
+                <a class="nav-menu-link" href="./porfolio.html">Portfolio</a>
+              </div>
+            </li>
+            <li>
+              <div class="link-underline-hover">
+                <a class="nav-menu-link" href="#">Kontakt</a>
+              </div>
+            </li>
           </ul>
         </nav>
         <ul class="header-contact">
           <li>
-            <a href="mailto:info@devstudio.com"
-              ><svg width="16px" height="12px">
+            <a href="mailto:info@devstudio.com">
+              <svg width="16px" height="12px">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
-              info@devstudio.com</a
-            >
+              info@devstudio.com
+            </a>
           </li>
           <li>
             <a href="tel:+48111111111">
@@ -58,9 +70,18 @@
             Efektywne rozwiązania <br />
             dla waszego biznesu
           </h1>
-          <button class="main-button" type="button">Zamów usługę</button>
+          <button data-modal-open class="main-button" type="button">Zamów usługę</button>
         </div>
       </section>
+      <div data-modal class="backdrop is-hidden">
+        <div class="modal">
+          <button data-modal-close type="button">
+            <svg width="18px" height="18px">
+              <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
       <section class="our-trumps section">
         <div class="container">
           <ul>
@@ -120,13 +141,22 @@
           <h2>Czym się zajmujemy</h2>
           <ul>
             <li>
-              <img src="./images/keyboard.jpg" alt="klawiatura" height="294" width="370" />
+              <figure class="what-we-do-list-item">
+                <img src="./images/keyboard.jpg" alt="klawiatura" height="294" width="370" />
+                <figcaption class="what-we-do-item-name">Aplikacje komputerowe</figcaption>
+              </figure>
             </li>
             <li>
-              <img src="./images/laptop.jpg" alt="laptop" height="294" width="370" />
+              <figure class="what-we-do-list-item">
+                <img src="./images/laptop.jpg" alt="laptop" height="294" width="370" />
+                <figcaption class="what-we-do-item-name">Aplikacje mobilne</figcaption>
+              </figure>
             </li>
             <li>
-              <img src="./images/tablet.jpg" alt="tablet" height="294" width="370" />
+              <figure class="what-we-do-list-item">
+                <img src="./images/tablet.jpg" alt="tablet" height="294" width="370" />
+                <figcaption class="what-we-do-item-name">Rozwiązania graficzne</figcaption>
+              </figure>
             </li>
           </ul>
         </div>
@@ -406,5 +436,6 @@
         </div>
       </div>
     </footer>
+    <script src="../js/modal.js"></script>
   </body>
 </html>
